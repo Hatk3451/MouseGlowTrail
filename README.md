@@ -95,6 +95,13 @@ Settings live in `%APPDATA%\MouseGlowTrail\settings.json`. To uninstall:
 2. Quit the app.
 3. Delete the exe and that folder.
 
+## Credits
+
+Created by [Hatk3451](https://github.com/Hatk3451), with AI coding assistants as co-developers:
+
+- **OpenAI GPT** (via Codex)
+- **Anthropic Claude** (via Claude Code)
+
 ## License
 
 [MIT](LICENSE)

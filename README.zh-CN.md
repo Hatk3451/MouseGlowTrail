@@ -95,6 +95,13 @@ dotnet run --project MouseGlowTrail.Bench -c Release -- verify
 2. 退出程序。
 3. 删除 exe 和上述文件夹。
 
+## 贡献者
+
+由 [Hatk3451](https://github.com/Hatk3451) 创作，AI 编程助手参与共同开发：
+
+- **OpenAI GPT**（通过 Codex）
+- **Anthropic Claude**（通过 Claude Code）
+
 ## 许可证
 
 [MIT](LICENSE)
