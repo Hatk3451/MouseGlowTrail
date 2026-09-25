@@ -34,7 +34,9 @@ jobs:
           Copy-Item README.md "$package/README.md"
           Copy-Item README.zh-CN.md "$package/README.zh-CN.md"
           Compress-Archive -Path "$package/*" -DestinationPath "$package.zip"
-          (Get-FileHash "$package.zip" -Algorithm SHA256).Hash + "  $package.zip" | Out-File -Encoding ascii "$package.zip.sha256"
+          # sha256sum format (lowercase, LF) so `sha256sum -c` works as-is.
+          $hash = (Get-FileHash "$package.zip" -Algorithm SHA256).Hash.ToLowerInvariant()
+          [IO.File]::WriteAllText("$PWD/$package.zip.sha256", "$hash  $package.zip`n")
           "PACKAGE=$package" >> $env:GITHUB_ENV
 
       - uses: softprops/action-gh-release@v2
