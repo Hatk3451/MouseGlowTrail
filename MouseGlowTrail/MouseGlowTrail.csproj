@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <RootNamespace>MouseGlowTrail</RootNamespace>
+    <AssemblyName>MouseGlowTrail</AssemblyName>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+
+    <Version>3.0.0</Version>
+    <Product>鼠标流光 MouseGlowTrail</Product>
+    <AssemblyTitle>鼠标流光</AssemblyTitle>
+    <Description>轻量、零干扰的鼠标流光轨迹</Description>
+    <Copyright>© 2026 Hatk3451</Copyright>
+    <Authors>Hatk3451</Authors>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/Hatk3451/MouseGlowTrail</RepositoryUrl>
+
+    <!-- Pure Win32 (no WinForms), so the self-contained single file can be fully trimmed. -->
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <SelfContained>true</SelfContained>
+    <PublishSingleFile>true</PublishSingleFile>
+    <PublishTrimmed>true</PublishTrimmed>
+    <TrimMode>full</TrimMode>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+    <EventSourceSupport>false</EventSourceSupport>
+    <DebugType>none</DebugType>
+
+    <!-- A background utility: small, steady heap and no extra GC threads. -->
+    <ServerGarbageCollection>false</ServerGarbageCollection>
+    <ConcurrentGarbageCollection>false</ConcurrentGarbageCollection>
+    <TieredPGO>true</TieredPGO>
+  </PropertyGroup>
+</Project>

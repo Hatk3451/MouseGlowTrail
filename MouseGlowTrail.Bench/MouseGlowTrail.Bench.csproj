@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Offline preview/benchmark harness: renders the shared trail code to PNGs, times it against the
+       v1 GDI+ path, runs invariant checks and produces app.ico. Not shipped. -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <RootNamespace>MouseGlowTrail.Bench</RootNamespace>
+    <Optimize>true</Optimize>
+    <TieredPGO>true</TieredPGO>
+  </PropertyGroup>
+  <ItemGroup>
+    <Using Remove="System.Windows.Forms" />
+    <Compile Include="..\MouseGlowTrail\Canvas.cs" />
+    <Compile Include="..\MouseGlowTrail\RibbonLimits.cs" />
+    <Compile Include="..\MouseGlowTrail\TrailStyles.cs" />
+    <Compile Include="..\MouseGlowTrail\TrailModel.cs" />
+    <Compile Include="..\MouseGlowTrail\Effects.cs" />
+    <Compile Include="..\MouseGlowTrail\FrameComposer.cs" />
+    <Compile Include="..\MouseGlowTrail\RenderConfig.cs" />
+    <Compile Include="..\MouseGlowTrail\Loc.cs" />
+    <Compile Include="..\MouseGlowTrail\IconPainter.cs" />
+    <!-- The live mode drives the real overlay engine with a scripted pointer. -->
+    <Compile Include="..\MouseGlowTrail\FrameProbe.cs" />
+    <Compile Include="..\MouseGlowTrail\TrailEngine.cs" />
+    <Compile Include="..\MouseGlowTrail\Native.cs" />
+    <Compile Include="..\MouseGlowTrail\NativeUi.cs" />
+    <Compile Include="..\MouseGlowTrail\CursorGeometry.cs" />
+    <Compile Include="..\MouseGlowTrail\Settings.cs" />
+    <Compile Include="..\MouseGlowTrail\Direct3D.cs" />
+    <Compile Include="..\MouseGlowTrail\GpuCanvas.cs" />
+    <Compile Include="..\MouseGlowTrail\Shaders.cs" />
+    <Compile Include="..\MouseGlowTrail\Presenters.cs" />
+  </ItemGroup>
+</Project>
